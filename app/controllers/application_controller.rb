@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
 require "application_responder"
-#include ActionDispatch::Flash
   self.responder = ApplicationResponder
   respond_to :html
   include SessionsHelper

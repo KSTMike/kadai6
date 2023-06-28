@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @picture.image.url %>
+  <%= image_tag @picture.image_url  if @picture.image_url %>
 </p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |

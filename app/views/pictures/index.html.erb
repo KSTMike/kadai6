@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Content</th>
       <th>Image</th>
+      <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= picture.title %></td>
         <td><%= picture.content %></td>
         <td><%= picture.image %></td>
+        <td><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,7 +27,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Picture', new_picture_path %>

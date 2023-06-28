@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
   before_validation { email.downcase! }
   validates :email, uniqueness: true
+  has_many :pictures
 end
